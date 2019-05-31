@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.2  -->
+<!-- 2015-04-17T02:39:23 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="testeTemplate" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b0769a7a-670c-4872-b4c9-d45e8162d1c3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="titulo" class="java.lang.String"/>
+	<parameter name="cnpj_empresa" class="java.lang.String"/>
+	<parameter name="nome_empresa" class="java.lang.String"/>
+	<parameter name="parametros" class="java.lang.String"/>
+	<queryString language="EJBQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="telefone" class="java.math.BigInteger">
+		<fieldDescription><![CDATA[telefone]]></fieldDescription>
+	</field>
+	<field name="idperfil" class="com.Hefesto.core.entidades.HefPerfil">
+		<fieldDescription><![CDATA[idperfil]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="idusuarioCadastro" class="com.Hefesto.core.entidades.HefUsuario">
+		<fieldDescription><![CDATA[idusuarioCadastro]]></fieldDescription>
+	</field>
+	<field name="idusuario" class="com.Hefesto.core.entidades.HefUsuario">
+		<fieldDescription><![CDATA[idusuario]]></fieldDescription>
+	</field>
+	<field name="idusuarioSistema" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[idusuarioSistema]]></fieldDescription>
+	</field>
+	<field name="idusuarioInfo" class="java.lang.Long">
+		<fieldDescription><![CDATA[idusuarioInfo]]></fieldDescription>
+	</field>
+	<field name="senha" class="java.lang.String">
+		<fieldDescription><![CDATA[senha]]></fieldDescription>
+	</field>
+	<field name="idativo" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[idativo]]></fieldDescription>
+	</field>
+	<field name="idfilial" class="com.Hefesto.core.entidades.HefFilial">
+		<fieldDescription><![CDATA[idfilial]]></fieldDescription>
+	</field>
+	<field name="idusuarioCancelado" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[idusuarioCancelado]]></fieldDescription>
+	</field>
+	<field name="dthcadastro" class="java.util.Date">
+		<fieldDescription><![CDATA[dthcadastro]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[email]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="380" height="11" uuid="af5de8e4-4ceb-495b-96d7-58590f5f279f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{titulo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="hh:mm, dd MMMM yyyy ">
+				<reportElement x="380" y="0" width="175" height="11" uuid="40d8f68d-08bf-447a-82d1-7d11c872b85a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="11" width="555" height="1" uuid="e5dccc27-97cd-43e9-bde8-63a972a8373b"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="72" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="80" height="50" uuid="ed9c98b6-cc9c-492e-b9d4-d18a91088fb3"/>
+				<imageExpression><![CDATA["com/Hefesto/core/utils/imagens/hefesto.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="380" y="50" width="174" height="16" uuid="eaeb759d-5c09-446a-9aa6-6718297bcb81"/>
+				<textFieldExpression><![CDATA["Página: "+$V{MASTER_CURRENT_PAGE}+" de "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="330" height="20" uuid="9218deec-2ffb-445e-8880-123cf81eb33f"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nome_empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="0" width="144" height="20" uuid="4b593ef9-ee44-4090-9aff-5f79edff2715"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["CNPJ: "+$P{cnpj_empresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="20" width="330" height="30" uuid="5d211763-f5dc-4c43-9947-21c49bfb85d8"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Usuários]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="71" width="555" height="1" uuid="a66becc9-5124-4504-acb1-83a0f313c3f8"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="15" backcolor="#C4C4C4" uuid="b5ba15bc-a2c7-445c-8009-08ad6fd3aa4a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="15" uuid="9f8f3114-b352-46c9-8100-3212917daf74">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="100" height="15" uuid="ea7282e3-6b66-4a6c-9a4e-a2ad875969f8">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="15" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="15" backcolor="#C4C4C4" uuid="0da25da1-e427-4f0e-bbf7-152c28ea3759">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="12" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="554" height="11" uuid="86422a4a-bbcf-41df-8b68-50715ff8424e">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parametros}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="a7d2e215-64e0-4af8-9bcc-d98b58f5be0d"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>
